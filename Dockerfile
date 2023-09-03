@@ -1,5 +1,6 @@
 # syntax = docker/dockerfile:experimental
 FROM python:slim-bookworm
+LABEL org.opencontainers.image.source https://github.com/JojiiOfficial/pgcli-docker
 RUN apt-get -y update && apt-get -y install libpq-dev build-essential less
 RUN apt clean
 RUN rm -rf /var/lib/apt/lists/*
