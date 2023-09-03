@@ -5,9 +5,9 @@ Dockerized version of the [pgcli](http://pgcli.com/) tool for postgres.
 
 ### Quick usage
 
-1. Pull the docker image: `docker pull dencold/pgcli`
-2. Run the container: `docker run -it --rm dencold/pgcli DB_URL`
-3. Or, if you already have a postgres container, you can just do this: `docker run -it --link my-postgres:postgres --rm dencold/pgcli`
+1. Pull the docker image: `docker pull ghcr.io/jojiiofficial/pgcli`
+2. Run the container: `docker run -it --rm ghcr.io/jojiiofficial/pgcli DB_URL`
+3. Or, if you already have a postgres container, you can just do this: `docker run -it --link my-postgres:postgres --rm ghcr.io/jojiiofficial/pgcli`
 
 Note that *DB_URL* is in the format of:
 
@@ -25,7 +25,7 @@ Installing pgcli is a [fairly straightforward process](http://pgcli.com/install)
 
 If you are already using [docker](https://www.docker.com/), life can be a lot easier. You are a simple pull away from getting pgcli on whatever environment you are running:
 
-`docker pull dencold/pgcli`
+`docker pull ghcr.io/jojiiofficial/pgcli`
 
 There are a number of additional benefits of using a docker container, we'll see these in the next section...
 
@@ -35,7 +35,7 @@ I generally run my development apps with a separate container for the postgres d
 
 If you have one of these postgres containers already running, all you need to do is link the postgres container to pgcli. For example, if your postgres container was named `my-postgres`, you can attach pgcli with this one-liner:
 
-```docker run -it --link my-postgres:postgres --rm dencold/pgcli```
+```docker run -it --link my-postgres:postgres --rm ghcr.io/jojiiofficial/pgcli```
 
 It will determine host, port, and login details directly from the linked postgres container's environment variables. You should be dropped right into a pgcli session without the need to type in any credentials. Awesomesauce!
 
